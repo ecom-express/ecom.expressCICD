@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "dispatchAs": {
+      "type": "string"
+    },
+    "dispatch.*": {
+      "type": "string"
+    },
+    "dispatch.adhoc_search_level": {
+      "type": "string"
+    },
+    "dispatch.now": {
+      "type": "boolean"
+    },
+    "force_dispatch": {
+      "type": "boolean"
+    },
+    "now": {
+      "type": "string"
+    },
+    "replay_speed": {
+      "type": "integer"
+    },
+    "replay_et": {
+      "type": "string"
+    },
+    "replay_lt": {
+      "type": "string"
+    },
+    "trigger_actions": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "dispatchAs",
+    "dispatch.*",
+    "dispatch.adhoc_search_level",
+    "dispatch.now",
+    "force_dispatch",
+    "now",
+    "replay_speed",
+    "replay_et",
+    "replay_lt",
+    "trigger_actions"
+  ]
+}

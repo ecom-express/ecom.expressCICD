@@ -1,0 +1,2010 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "required": [
+    "links",
+    "origin",
+    "updated",
+    "generator",
+    "entry",
+    "paging",
+    "messages"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "links": {
+      "$id": "#/properties/links",
+      "type": "object",
+      "title": "The links schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "_reload": "/services/data/indexes/_reload",
+          "create": "/services/data/indexes/_new",
+          "_acl": "/services/data/indexes/_acl"
+        }
+      ],
+      "required": [
+        "create",
+        "_reload",
+        "_acl"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "create": {
+          "$id": "#/properties/links/properties/create",
+          "type": "string",
+          "title": "The create schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "/services/data/indexes/_new"
+          ]
+        },
+        "_reload": {
+          "$id": "#/properties/links/properties/_reload",
+          "type": "string",
+          "title": "The _reload schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "/services/data/indexes/_reload"
+          ]
+        },
+        "_acl": {
+          "$id": "#/properties/links/properties/_acl",
+          "type": "string",
+          "title": "The _acl schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "/services/data/indexes/_acl"
+          ]
+        }
+      }
+    },
+    "origin": {
+      "$id": "#/properties/origin",
+      "type": "string",
+      "title": "The origin schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "http://localhost:8089/services/data/indexes"
+      ]
+    },
+    "updated": {
+      "$id": "#/properties/updated",
+      "type": "string",
+      "title": "The updated schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-05-07T16:41:50+05:30"
+      ]
+    },
+    "generator": {
+      "$id": "#/properties/generator",
+      "type": "object",
+      "title": "The generator schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "version": "8.0.3",
+          "build": "a6754d8441bf"
+        }
+      ],
+      "required": [
+        "build",
+        "version"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "build": {
+          "$id": "#/properties/generator/properties/build",
+          "type": "string",
+          "title": "The build schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "a6754d8441bf"
+          ]
+        },
+        "version": {
+          "$id": "#/properties/generator/properties/version",
+          "type": "string",
+          "title": "The version schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "8.0.3"
+          ]
+        }
+      }
+    },
+    "entry": {
+      "$id": "#/properties/entry",
+      "type": "array",
+      "title": "The entry schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "acl": {
+              "sharing": "system",
+              "modifiable": false,
+              "owner": "nobody",
+              "can_write": true,
+              "can_list": true,
+              "perms": {
+                "read": [
+                  "*"
+                ],
+                "write": [
+                  "admin",
+                  "splunk-system-role"
+                ]
+              },
+              "removable": false,
+              "app": "system"
+            },
+            "name": "_audit",
+            "links": {
+              "edit": "/servicesNS/nobody/system/data/indexes/_audit",
+              "list": "/servicesNS/nobody/system/data/indexes/_audit",
+              "_reload": "/servicesNS/nobody/system/data/indexes/_audit/_reload",
+              "alternate": "/servicesNS/nobody/system/data/indexes/_audit"
+            },
+            "content": {
+              "partialServiceMetaPeriod": 0.0,
+              "tstatsHomePath": "volume:_splunk_summaries\\audit\\datamodel_summary",
+              "assureUTF8": false,
+              "maxBloomBackfillBucketAge": "30d",
+              "throttleCheckPeriod": 15.0,
+              "disabled": false,
+              "maxConcurrentOptimizes": 6.0,
+              "thawedPath": "$SPLUNK_DB\\audit\\thaweddb",
+              "archiver.maxDataArchiveRetentionPeriod": 0.0,
+              "maxTime": "2020-05-07T16:41:22+0530",
+              "processTrackerServiceInterval": 1.0,
+              "timePeriodInSecBeforeTsidxReduction": 604800.0,
+              "frozenTimePeriodInSecs": 188697600.0,
+              "maxMetaEntries": 1000000.0,
+              "selfStorageThreads": null,
+              "minHotIdleSecsBeforeForceRoll": 0.0,
+              "maxTotalDataSizeMB": 500000.0,
+              "homePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\db",
+              "serviceMetaPeriod": 25.0,
+              "coldToFrozenScript": "",
+              "lastInitSequenceNumber": 7.0,
+              "currentDBSizeMB": "2",
+              "quarantinePastSecs": 77760000.0,
+              "suspendHotRollByDeleteQuery": false,
+              "waitPeriodInSecsForManifestWrite": 60.0,
+              "tsidxWritingLevel": null,
+              "maxWarmDBCount": 300.0,
+              "fileSystemExecutorWorkers": 5.0,
+              "defaultDatabase": "main",
+              "metric.tsidxTargetSizeMB": 1500.0,
+              "lastInitTime": 1588849883.0,
+              "compressRawdata": true,
+              "archiver.enableDataArchive": false,
+              "datatype": "event",
+              "coldToFrozenDir": "",
+              "rawChunkSizeBytes": 131072.0,
+              "maxHotBuckets": 3.0,
+              "thawedPath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\thaweddb",
+              "minRawFileSyncSecs": "disable",
+              "tstatsHomePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\datamodel_summary",
+              "isReady": true,
+              "rtRouterThreads": null,
+              "serviceInactiveIndexesPeriod": 60.0,
+              "minTime": "2020-04-30T15:45:43+0530",
+              "maxGlobalDataSizeMB": 0.0,
+              "hotBucketTimeRefreshInterval": 10.0,
+              "homePath.maxDataSizeMB": 0.0,
+              "bucketRebuildMemoryHint": 0.0,
+              "maxHotSpanSecs": 7776000.0,
+              "metric.enableFloatingPointCompression": true,
+              "streamingTargetTsidxSyncPeriodMsec": 5000.0,
+              "indexThreads": "auto",
+              "memPoolMB": "auto",
+              "tsidxTargetSizeMB": 1500.0,
+              "isVirtual": false,
+              "repFactor": 0.0,
+              "enableOnlineBucketRepair": true,
+              "maxBucketSizeCacheEntries": 0.0,
+              "coldPath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\colddb",
+              "summaryHomePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\summary",
+              "sync": 0.0,
+              "maxDataSize": "auto",
+              "coldPath": "$SPLUNK_DB\\audit\\colddb",
+              "tsidxReductionCheckPeriodInSec": 600.0,
+              "isInternal": true,
+              "enableTsidxReduction": false,
+              "journalCompression": "gzip",
+              "enableDataIntegrityControl": false,
+              "homePath": "$SPLUNK_DB\\audit\\db",
+              "totalEventCount": 13899.0,
+              "syncMeta": true,
+              "coldPath.maxDataSizeMB": 0.0,
+              "maxTimeUnreplicatedWithAcks": 60.0,
+              "suppressBannerList": "",
+              "maxHotIdleSecs": 0.0,
+              "metric.compressionBlockSize": 1024.0,
+              "serviceOnlyAsNeeded": true,
+              "enableRealtimeSearch": true,
+              "maxTimeUnreplicatedNoAcks": 300.0,
+              "warmToColdScript": "",
+              "serviceSubtaskTimingPeriod": 30.0,
+              "quarantineFutureSecs": 2592000.0,
+              "rotatePeriodInSecs": 60.0,
+              "minStreamGroupQueueSize": 2000.0,
+              "maxGlobalRawDataSizeMB": 0.0,
+              "maxRunningProcessGroupsLowPriority": 1.0,
+              "splitByIndexKeys": "",
+              "rtRouterQueueSize": null,
+              "maxMemMB": 5.0,
+              "eai:acl": null,
+              "maxRunningProcessGroups": 8.0
+            },
+            "updated": "2020-05-07T16:41:26+05:30",
+            "id": "http://localhost:8089/servicesNS/nobody/system/data/indexes/_audit",
+            "author": "nobody"
+          },
+          {
+            "links": {
+              "list": "/servicesNS/nobody/system/data/indexes/_internal",
+              "_reload": "/servicesNS/nobody/system/data/indexes/_internal/_reload",
+              "alternate": "/servicesNS/nobody/system/data/indexes/_internal",
+              "edit": "/servicesNS/nobody/system/data/indexes/_internal"
+            },
+            "content": {
+              "hotBucketTimeRefreshInterval": 10.0,
+              "homePath.maxDataSizeMB": 0.0,
+              "bucketRebuildMemoryHint": 0.0,
+              "metric.enableFloatingPointCompression": true,
+              "streamingTargetTsidxSyncPeriodMsec": 5000.0,
+              "maxHotSpanSecs": 432000.0,
+              "indexThreads": "auto",
+              "memPoolMB": "auto",
+              "tsidxTargetSizeMB": 1500.0,
+              "isVirtual": false,
+              "repFactor": 0.0,
+              "maxBucketSizeCacheEntries": 0.0,
+              "enableOnlineBucketRepair": true,
+              "coldPath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\_internaldb\\colddb",
+              "summaryHomePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\_internaldb\\summary",
+              "sync": 0.0,
+              "coldPath": "$SPLUNK_DB\\_internaldb\\colddb",
+              "maxDataSize": "1000",
+              "tsidxReductionCheckPeriodInSec": 600.0,
+              "isInternal": true,
+              "enableTsidxReduction": false,
+              "enableDataIntegrityControl": false,
+              "journalCompression": "gzip",
+              "homePath": "$SPLUNK_DB\\_internaldb\\db",
+              "totalEventCount": 1028918.0,
+              "syncMeta": true,
+              "suppressBannerList": "",
+              "maxTimeUnreplicatedWithAcks": 60.0,
+              "coldPath.maxDataSizeMB": 0.0,
+              "maxHotIdleSecs": 0.0,
+              "metric.compressionBlockSize": 1024.0,
+              "serviceOnlyAsNeeded": true,
+              "enableRealtimeSearch": true,
+              "maxTimeUnreplicatedNoAcks": 300.0,
+              "warmToColdScript": "",
+              "serviceSubtaskTimingPeriod": 30.0,
+              "quarantineFutureSecs": 2592000.0,
+              "rotatePeriodInSecs": 60.0,
+              "maxGlobalRawDataSizeMB": 0.0,
+              "minStreamGroupQueueSize": 2000.0,
+              "maxRunningProcessGroupsLowPriority": 1.0,
+              "rtRouterQueueSize": null,
+              "splitByIndexKeys": "",
+              "maxMemMB": 5.0,
+              "eai:acl": null,
+              "maxRunningProcessGroups": 8.0,
+              "partialServiceMetaPeriod": 0.0,
+              "tstatsHomePath": "volume:_splunk_summaries\\_internaldb\\datamodel_summary",
+              "maxBloomBackfillBucketAge": "30d",
+              "assureUTF8": false,
+              "throttleCheckPeriod": 15.0,
+              "disabled": false,
+              "maxConcurrentOptimizes": 6.0,
+              "thawedPath": "$SPLUNK_DB\\_internaldb\\thaweddb",
+              "archiver.maxDataArchiveRetentionPeriod": 0.0,
+              "maxTime": "2020-05-07T16:41:32+0530",
+              "processTrackerServiceInterval": 1.0,
+              "timePeriodInSecBeforeTsidxReduction": 604800.0,
+              "maxMetaEntries": 1000000.0,
+              "frozenTimePeriodInSecs": 2592000.0,
+              "selfStorageThreads": null,
+              "homePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\_internaldb\\db",
+              "maxTotalDataSizeMB": 500000.0,
+              "minHotIdleSecsBeforeForceRoll": 0.0,
+              "serviceMetaPeriod": 25.0,
+              "lastInitSequenceNumber": 7.0,
+              "coldToFrozenScript": "",
+              "currentDBSizeMB": "115",
+              "quarantinePastSecs": 77760000.0,
+              "suspendHotRollByDeleteQuery": false,
+              "waitPeriodInSecsForManifestWrite": 60.0,
+              "maxWarmDBCount": 300.0,
+              "tsidxWritingLevel": null,
+              "fileSystemExecutorWorkers": 5.0,
+              "defaultDatabase": "main",
+              "lastInitTime": 1588849883.0,
+              "metric.tsidxTargetSizeMB": 1500.0,
+              "compressRawdata": true,
+              "archiver.enableDataArchive": false,
+              "coldToFrozenDir": "",
+              "datatype": "event",
+              "rawChunkSizeBytes": 131072.0,
+              "maxHotBuckets": 3.0,
+              "thawedPath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\_internaldb\\thaweddb",
+              "minRawFileSyncSecs": "disable",
+              "isReady": true,
+              "tstatsHomePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\_internaldb\\datamodel_summary",
+              "rtRouterThreads": null,
+              "serviceInactiveIndexesPeriod": 60.0,
+              "minTime": "2020-04-30T15:44:53+0530",
+              "maxGlobalDataSizeMB": 0.0
+            },
+            "updated": "2020-05-07T16:41:37+05:30",
+            "id": "http://localhost:8089/servicesNS/nobody/system/data/indexes/_internal",
+            "author": "nobody",
+            "acl": {
+              "sharing": "system",
+              "modifiable": false,
+              "owner": "nobody",
+              "can_write": true,
+              "can_list": true,
+              "perms": {
+                "read": [
+                  "*"
+                ],
+                "write": [
+                  "admin",
+                  "splunk-system-role"
+                ]
+              },
+              "removable": false,
+              "app": "system"
+            },
+            "name": "_internal"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/entry/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/entry/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "updated": "2020-05-07T16:41:26+05:30",
+                "content": {
+                  "suspendHotRollByDeleteQuery": false,
+                  "quarantinePastSecs": 77760000.0,
+                  "waitPeriodInSecsForManifestWrite": 60.0,
+                  "tsidxWritingLevel": null,
+                  "maxWarmDBCount": 300.0,
+                  "fileSystemExecutorWorkers": 5.0,
+                  "defaultDatabase": "main",
+                  "lastInitTime": 1588849883.0,
+                  "metric.tsidxTargetSizeMB": 1500.0,
+                  "compressRawdata": true,
+                  "archiver.enableDataArchive": false,
+                  "datatype": "event",
+                  "coldToFrozenDir": "",
+                  "rawChunkSizeBytes": 131072.0,
+                  "maxHotBuckets": 3.0,
+                  "thawedPath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\thaweddb",
+                  "minRawFileSyncSecs": "disable",
+                  "tstatsHomePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\datamodel_summary",
+                  "isReady": true,
+                  "rtRouterThreads": null,
+                  "maxGlobalDataSizeMB": 0.0,
+                  "minTime": "2020-04-30T15:45:43+0530",
+                  "serviceInactiveIndexesPeriod": 60.0,
+                  "hotBucketTimeRefreshInterval": 10.0,
+                  "homePath.maxDataSizeMB": 0.0,
+                  "streamingTargetTsidxSyncPeriodMsec": 5000.0,
+                  "metric.enableFloatingPointCompression": true,
+                  "bucketRebuildMemoryHint": 0.0,
+                  "maxHotSpanSecs": 7776000.0,
+                  "indexThreads": "auto",
+                  "memPoolMB": "auto",
+                  "tsidxTargetSizeMB": 1500.0,
+                  "isVirtual": false,
+                  "repFactor": 0.0,
+                  "enableOnlineBucketRepair": true,
+                  "maxBucketSizeCacheEntries": 0.0,
+                  "coldPath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\colddb",
+                  "summaryHomePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\summary",
+                  "sync": 0.0,
+                  "coldPath": "$SPLUNK_DB\\audit\\colddb",
+                  "maxDataSize": "auto",
+                  "tsidxReductionCheckPeriodInSec": 600.0,
+                  "isInternal": true,
+                  "enableTsidxReduction": false,
+                  "enableDataIntegrityControl": false,
+                  "journalCompression": "gzip",
+                  "homePath": "$SPLUNK_DB\\audit\\db",
+                  "totalEventCount": 13899.0,
+                  "syncMeta": true,
+                  "suppressBannerList": "",
+                  "maxTimeUnreplicatedWithAcks": 60.0,
+                  "coldPath.maxDataSizeMB": 0.0,
+                  "maxHotIdleSecs": 0.0,
+                  "metric.compressionBlockSize": 1024.0,
+                  "maxTimeUnreplicatedNoAcks": 300.0,
+                  "enableRealtimeSearch": true,
+                  "serviceOnlyAsNeeded": true,
+                  "quarantineFutureSecs": 2592000.0,
+                  "serviceSubtaskTimingPeriod": 30.0,
+                  "warmToColdScript": "",
+                  "rotatePeriodInSecs": 60.0,
+                  "maxGlobalRawDataSizeMB": 0.0,
+                  "minStreamGroupQueueSize": 2000.0,
+                  "maxRunningProcessGroupsLowPriority": 1.0,
+                  "rtRouterQueueSize": null,
+                  "splitByIndexKeys": "",
+                  "maxMemMB": 5.0,
+                  "eai:acl": null,
+                  "maxRunningProcessGroups": 8.0,
+                  "partialServiceMetaPeriod": 0.0,
+                  "tstatsHomePath": "volume:_splunk_summaries\\audit\\datamodel_summary",
+                  "maxBloomBackfillBucketAge": "30d",
+                  "assureUTF8": false,
+                  "throttleCheckPeriod": 15.0,
+                  "disabled": false,
+                  "maxConcurrentOptimizes": 6.0,
+                  "thawedPath": "$SPLUNK_DB\\audit\\thaweddb",
+                  "archiver.maxDataArchiveRetentionPeriod": 0.0,
+                  "maxTime": "2020-05-07T16:41:22+0530",
+                  "processTrackerServiceInterval": 1.0,
+                  "timePeriodInSecBeforeTsidxReduction": 604800.0,
+                  "frozenTimePeriodInSecs": 188697600.0,
+                  "maxMetaEntries": 1000000.0,
+                  "selfStorageThreads": null,
+                  "minHotIdleSecsBeforeForceRoll": 0.0,
+                  "maxTotalDataSizeMB": 500000.0,
+                  "homePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\db",
+                  "serviceMetaPeriod": 25.0,
+                  "lastInitSequenceNumber": 7.0,
+                  "coldToFrozenScript": "",
+                  "currentDBSizeMB": "2"
+                },
+                "id": "http://localhost:8089/servicesNS/nobody/system/data/indexes/_audit",
+                "author": "nobody",
+                "acl": {
+                  "owner": "nobody",
+                  "can_write": true,
+                  "can_list": true,
+                  "perms": {
+                    "read": [
+                      "*"
+                    ],
+                    "write": [
+                      "admin",
+                      "splunk-system-role"
+                    ]
+                  },
+                  "app": "system",
+                  "removable": false,
+                  "sharing": "system",
+                  "modifiable": false
+                },
+                "name": "_audit",
+                "links": {
+                  "list": "/servicesNS/nobody/system/data/indexes/_audit",
+                  "_reload": "/servicesNS/nobody/system/data/indexes/_audit/_reload",
+                  "alternate": "/servicesNS/nobody/system/data/indexes/_audit",
+                  "edit": "/servicesNS/nobody/system/data/indexes/_audit"
+                }
+              }
+            ],
+            "required": [
+              "name",
+              "id",
+              "updated",
+              "links",
+              "author",
+              "acl",
+              "content"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "name": {
+                "$id": "#/properties/entry/items/anyOf/0/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "_audit"
+                ]
+              },
+              "id": {
+                "$id": "#/properties/entry/items/anyOf/0/properties/id",
+                "type": "string",
+                "title": "The id schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "http://localhost:8089/servicesNS/nobody/system/data/indexes/_audit"
+                ]
+              },
+              "updated": {
+                "$id": "#/properties/entry/items/anyOf/0/properties/updated",
+                "type": "string",
+                "title": "The updated schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "2020-05-07T16:41:26+05:30"
+                ]
+              },
+              "links": {
+                "$id": "#/properties/entry/items/anyOf/0/properties/links",
+                "type": "object",
+                "title": "The links schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "list": "/servicesNS/nobody/system/data/indexes/_audit",
+                    "_reload": "/servicesNS/nobody/system/data/indexes/_audit/_reload",
+                    "alternate": "/servicesNS/nobody/system/data/indexes/_audit",
+                    "edit": "/servicesNS/nobody/system/data/indexes/_audit"
+                  }
+                ],
+                "required": [
+                  "alternate",
+                  "list",
+                  "_reload",
+                  "edit"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                  "alternate": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/links/properties/alternate",
+                    "type": "string",
+                    "title": "The alternate schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "/servicesNS/nobody/system/data/indexes/_audit"
+                    ]
+                  },
+                  "list": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/links/properties/list",
+                    "type": "string",
+                    "title": "The list schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "/servicesNS/nobody/system/data/indexes/_audit"
+                    ]
+                  },
+                  "_reload": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/links/properties/_reload",
+                    "type": "string",
+                    "title": "The _reload schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "/servicesNS/nobody/system/data/indexes/_audit/_reload"
+                    ]
+                  },
+                  "edit": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/links/properties/edit",
+                    "type": "string",
+                    "title": "The edit schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "/servicesNS/nobody/system/data/indexes/_audit"
+                    ]
+                  }
+                }
+              },
+              "author": {
+                "$id": "#/properties/entry/items/anyOf/0/properties/author",
+                "type": "string",
+                "title": "The author schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "nobody"
+                ]
+              },
+              "acl": {
+                "$id": "#/properties/entry/items/anyOf/0/properties/acl",
+                "type": "object",
+                "title": "The acl schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "owner": "nobody",
+                    "can_write": true,
+                    "can_list": true,
+                    "perms": {
+                      "read": [
+                        "*"
+                      ],
+                      "write": [
+                        "admin",
+                        "splunk-system-role"
+                      ]
+                    },
+                    "app": "system",
+                    "removable": false,
+                    "sharing": "system",
+                    "modifiable": false
+                  }
+                ],
+                "required": [
+                  "app",
+                  "can_list",
+                  "can_write",
+                  "modifiable",
+                  "owner",
+                  "perms",
+                  "removable",
+                  "sharing"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                  "app": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/app",
+                    "type": "string",
+                    "title": "The app schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "system"
+                    ]
+                  },
+                  "can_list": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/can_list",
+                    "type": "boolean",
+                    "title": "The can_list schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "can_write": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/can_write",
+                    "type": "boolean",
+                    "title": "The can_write schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "modifiable": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/modifiable",
+                    "type": "boolean",
+                    "title": "The modifiable schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "owner": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/owner",
+                    "type": "string",
+                    "title": "The owner schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "nobody"
+                    ]
+                  },
+                  "perms": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/perms",
+                    "type": "object",
+                    "title": "The perms schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                      {
+                        "write": [
+                          "admin",
+                          "splunk-system-role"
+                        ],
+                        "read": [
+                          "*"
+                        ]
+                      }
+                    ],
+                    "required": [
+                      "read",
+                      "write"
+                    ],
+                    "additionalProperties": true,
+                    "properties": {
+                      "read": {
+                        "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/perms/properties/read",
+                        "type": "array",
+                        "title": "The read schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "examples": [
+                          [
+                            "*"
+                          ]
+                        ],
+                        "additionalItems": true,
+                        "items": {
+                          "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/perms/properties/read/items",
+                          "anyOf": [
+                            {
+                              "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/perms/properties/read/items/anyOf/0",
+                              "type": "string",
+                              "title": "The first anyOf schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                "*"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "write": {
+                        "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/perms/properties/write",
+                        "type": "array",
+                        "title": "The write schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "examples": [
+                          [
+                            "admin",
+                            "splunk-system-role"
+                          ]
+                        ],
+                        "additionalItems": true,
+                        "items": {
+                          "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/perms/properties/write/items",
+                          "anyOf": [
+                            {
+                              "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/perms/properties/write/items/anyOf/0",
+                              "type": "string",
+                              "title": "The first anyOf schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                "admin",
+                                "splunk-system-role"
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "removable": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/removable",
+                    "type": "boolean",
+                    "title": "The removable schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "sharing": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/acl/properties/sharing",
+                    "type": "string",
+                    "title": "The sharing schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "system"
+                    ]
+                  }
+                }
+              },
+              "content": {
+                "$id": "#/properties/entry/items/anyOf/0/properties/content",
+                "type": "object",
+                "title": "The content schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "maxDataSize": "auto",
+                    "coldPath": "$SPLUNK_DB\\audit\\colddb",
+                    "tsidxReductionCheckPeriodInSec": 600.0,
+                    "isInternal": true,
+                    "enableTsidxReduction": false,
+                    "enableDataIntegrityControl": false,
+                    "journalCompression": "gzip",
+                    "homePath": "$SPLUNK_DB\\audit\\db",
+                    "totalEventCount": 13899.0,
+                    "syncMeta": true,
+                    "suppressBannerList": "",
+                    "maxTimeUnreplicatedWithAcks": 60.0,
+                    "coldPath.maxDataSizeMB": 0.0,
+                    "maxHotIdleSecs": 0.0,
+                    "metric.compressionBlockSize": 1024.0,
+                    "serviceOnlyAsNeeded": true,
+                    "enableRealtimeSearch": true,
+                    "maxTimeUnreplicatedNoAcks": 300.0,
+                    "warmToColdScript": "",
+                    "serviceSubtaskTimingPeriod": 30.0,
+                    "quarantineFutureSecs": 2592000.0,
+                    "rotatePeriodInSecs": 60.0,
+                    "minStreamGroupQueueSize": 2000.0,
+                    "maxGlobalRawDataSizeMB": 0.0,
+                    "maxRunningProcessGroupsLowPriority": 1.0,
+                    "splitByIndexKeys": "",
+                    "rtRouterQueueSize": null,
+                    "maxMemMB": 5.0,
+                    "eai:acl": null,
+                    "maxRunningProcessGroups": 8.0,
+                    "partialServiceMetaPeriod": 0.0,
+                    "tstatsHomePath": "volume:_splunk_summaries\\audit\\datamodel_summary",
+                    "maxBloomBackfillBucketAge": "30d",
+                    "assureUTF8": false,
+                    "throttleCheckPeriod": 15.0,
+                    "disabled": false,
+                    "maxConcurrentOptimizes": 6.0,
+                    "thawedPath": "$SPLUNK_DB\\audit\\thaweddb",
+                    "archiver.maxDataArchiveRetentionPeriod": 0.0,
+                    "maxTime": "2020-05-07T16:41:22+0530",
+                    "processTrackerServiceInterval": 1.0,
+                    "timePeriodInSecBeforeTsidxReduction": 604800.0,
+                    "frozenTimePeriodInSecs": 188697600.0,
+                    "maxMetaEntries": 1000000.0,
+                    "selfStorageThreads": null,
+                    "minHotIdleSecsBeforeForceRoll": 0.0,
+                    "maxTotalDataSizeMB": 500000.0,
+                    "homePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\db",
+                    "serviceMetaPeriod": 25.0,
+                    "coldToFrozenScript": "",
+                    "lastInitSequenceNumber": 7.0,
+                    "currentDBSizeMB": "2",
+                    "quarantinePastSecs": 77760000.0,
+                    "suspendHotRollByDeleteQuery": false,
+                    "waitPeriodInSecsForManifestWrite": 60.0,
+                    "maxWarmDBCount": 300.0,
+                    "tsidxWritingLevel": null,
+                    "fileSystemExecutorWorkers": 5.0,
+                    "defaultDatabase": "main",
+                    "metric.tsidxTargetSizeMB": 1500.0,
+                    "lastInitTime": 1588849883.0,
+                    "compressRawdata": true,
+                    "archiver.enableDataArchive": false,
+                    "datatype": "event",
+                    "coldToFrozenDir": "",
+                    "rawChunkSizeBytes": 131072.0,
+                    "maxHotBuckets": 3.0,
+                    "thawedPath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\thaweddb",
+                    "minRawFileSyncSecs": "disable",
+                    "isReady": true,
+                    "tstatsHomePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\datamodel_summary",
+                    "rtRouterThreads": null,
+                    "maxGlobalDataSizeMB": 0.0,
+                    "minTime": "2020-04-30T15:45:43+0530",
+                    "serviceInactiveIndexesPeriod": 60.0,
+                    "hotBucketTimeRefreshInterval": 10.0,
+                    "homePath.maxDataSizeMB": 0.0,
+                    "streamingTargetTsidxSyncPeriodMsec": 5000.0,
+                    "metric.enableFloatingPointCompression": true,
+                    "bucketRebuildMemoryHint": 0.0,
+                    "maxHotSpanSecs": 7776000.0,
+                    "indexThreads": "auto",
+                    "memPoolMB": "auto",
+                    "tsidxTargetSizeMB": 1500.0,
+                    "isVirtual": false,
+                    "repFactor": 0.0,
+                    "enableOnlineBucketRepair": true,
+                    "maxBucketSizeCacheEntries": 0.0,
+                    "coldPath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\colddb",
+                    "summaryHomePath_expanded": "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\summary",
+                    "sync": 0.0
+                  }
+                ],
+                "required": [
+                  "archiver.enableDataArchive",
+                  "archiver.maxDataArchiveRetentionPeriod",
+                  "assureUTF8",
+                  "bucketRebuildMemoryHint",
+                  "coldPath",
+                  "coldPath.maxDataSizeMB",
+                  "coldPath_expanded",
+                  "coldToFrozenDir",
+                  "coldToFrozenScript",
+                  "compressRawdata",
+                  "currentDBSizeMB",
+                  "datatype",
+                  "defaultDatabase",
+                  "disabled",
+                  "eai:acl",
+                  "enableDataIntegrityControl",
+                  "enableOnlineBucketRepair",
+                  "enableRealtimeSearch",
+                  "enableTsidxReduction",
+                  "fileSystemExecutorWorkers",
+                  "frozenTimePeriodInSecs",
+                  "homePath",
+                  "homePath.maxDataSizeMB",
+                  "homePath_expanded",
+                  "hotBucketTimeRefreshInterval",
+                  "indexThreads",
+                  "isInternal",
+                  "isReady",
+                  "isVirtual",
+                  "journalCompression",
+                  "lastInitSequenceNumber",
+                  "lastInitTime",
+                  "maxBloomBackfillBucketAge",
+                  "maxBucketSizeCacheEntries",
+                  "maxConcurrentOptimizes",
+                  "maxDataSize",
+                  "maxGlobalDataSizeMB",
+                  "maxGlobalRawDataSizeMB",
+                  "maxHotBuckets",
+                  "maxHotIdleSecs",
+                  "maxHotSpanSecs",
+                  "maxMemMB",
+                  "maxMetaEntries",
+                  "maxRunningProcessGroups",
+                  "maxRunningProcessGroupsLowPriority",
+                  "maxTime",
+                  "maxTimeUnreplicatedNoAcks",
+                  "maxTimeUnreplicatedWithAcks",
+                  "maxTotalDataSizeMB",
+                  "maxWarmDBCount",
+                  "memPoolMB",
+                  "metric.compressionBlockSize",
+                  "metric.enableFloatingPointCompression",
+                  "metric.tsidxTargetSizeMB",
+                  "minHotIdleSecsBeforeForceRoll",
+                  "minRawFileSyncSecs",
+                  "minStreamGroupQueueSize",
+                  "minTime",
+                  "partialServiceMetaPeriod",
+                  "processTrackerServiceInterval",
+                  "quarantineFutureSecs",
+                  "quarantinePastSecs",
+                  "rawChunkSizeBytes",
+                  "repFactor",
+                  "rotatePeriodInSecs",
+                  "rtRouterQueueSize",
+                  "rtRouterThreads",
+                  "selfStorageThreads",
+                  "serviceInactiveIndexesPeriod",
+                  "serviceMetaPeriod",
+                  "serviceOnlyAsNeeded",
+                  "serviceSubtaskTimingPeriod",
+                  "splitByIndexKeys",
+                  "streamingTargetTsidxSyncPeriodMsec",
+                  "summaryHomePath_expanded",
+                  "suppressBannerList",
+                  "suspendHotRollByDeleteQuery",
+                  "sync",
+                  "syncMeta",
+                  "thawedPath",
+                  "thawedPath_expanded",
+                  "throttleCheckPeriod",
+                  "timePeriodInSecBeforeTsidxReduction",
+                  "totalEventCount",
+                  "tsidxReductionCheckPeriodInSec",
+                  "tsidxTargetSizeMB",
+                  "tsidxWritingLevel",
+                  "tstatsHomePath",
+                  "tstatsHomePath_expanded",
+                  "waitPeriodInSecsForManifestWrite",
+                  "warmToColdScript"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                  "archiver.enableDataArchive": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/archiver.enableDataArchive",
+                    "type": "boolean",
+                    "title": "The archiver.enableDataArchive schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "archiver.maxDataArchiveRetentionPeriod": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/archiver.maxDataArchiveRetentionPeriod",
+                    "type": "integer",
+                    "title": "The archiver.maxDataArchiveRetentionPeriod schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "assureUTF8": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/assureUTF8",
+                    "type": "boolean",
+                    "title": "The assureUTF8 schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "bucketRebuildMemoryHint": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/bucketRebuildMemoryHint",
+                    "type": "integer",
+                    "title": "The bucketRebuildMemoryHint schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "coldPath": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/coldPath",
+                    "type": "string",
+                    "title": "The coldPath schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "$SPLUNK_DB\\audit\\colddb"
+                    ]
+                  },
+                  "coldPath.maxDataSizeMB": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/coldPath.maxDataSizeMB",
+                    "type": "integer",
+                    "title": "The coldPath.maxDataSizeMB schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "coldPath_expanded": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/coldPath_expanded",
+                    "type": "string",
+                    "title": "The coldPath_expanded schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\colddb"
+                    ]
+                  },
+                  "coldToFrozenDir": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/coldToFrozenDir",
+                    "type": "string",
+                    "title": "The coldToFrozenDir schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ]
+                  },
+                  "coldToFrozenScript": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/coldToFrozenScript",
+                    "type": "string",
+                    "title": "The coldToFrozenScript schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ]
+                  },
+                  "compressRawdata": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/compressRawdata",
+                    "type": "boolean",
+                    "title": "The compressRawdata schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "currentDBSizeMB": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/currentDBSizeMB",
+                    "type": "string",
+                    "title": "The currentDBSizeMB schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "2"
+                    ]
+                  },
+                  "datatype": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/datatype",
+                    "type": "string",
+                    "title": "The datatype schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "event"
+                    ]
+                  },
+                  "defaultDatabase": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/defaultDatabase",
+                    "type": "string",
+                    "title": "The defaultDatabase schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "main"
+                    ]
+                  },
+                  "disabled": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/disabled",
+                    "type": "boolean",
+                    "title": "The disabled schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "eai:acl": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/eai:acl",
+                    "type": "null",
+                    "title": "The eai:acl schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "enableDataIntegrityControl": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/enableDataIntegrityControl",
+                    "type": "boolean",
+                    "title": "The enableDataIntegrityControl schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "enableOnlineBucketRepair": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/enableOnlineBucketRepair",
+                    "type": "boolean",
+                    "title": "The enableOnlineBucketRepair schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "enableRealtimeSearch": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/enableRealtimeSearch",
+                    "type": "boolean",
+                    "title": "The enableRealtimeSearch schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "enableTsidxReduction": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/enableTsidxReduction",
+                    "type": "boolean",
+                    "title": "The enableTsidxReduction schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "fileSystemExecutorWorkers": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/fileSystemExecutorWorkers",
+                    "type": "integer",
+                    "title": "The fileSystemExecutorWorkers schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      5.0
+                    ]
+                  },
+                  "frozenTimePeriodInSecs": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/frozenTimePeriodInSecs",
+                    "type": "integer",
+                    "title": "The frozenTimePeriodInSecs schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      188697600.0
+                    ]
+                  },
+                  "homePath": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/homePath",
+                    "type": "string",
+                    "title": "The homePath schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "$SPLUNK_DB\\audit\\db"
+                    ]
+                  },
+                  "homePath.maxDataSizeMB": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/homePath.maxDataSizeMB",
+                    "type": "integer",
+                    "title": "The homePath.maxDataSizeMB schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "homePath_expanded": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/homePath_expanded",
+                    "type": "string",
+                    "title": "The homePath_expanded schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\db"
+                    ]
+                  },
+                  "hotBucketTimeRefreshInterval": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/hotBucketTimeRefreshInterval",
+                    "type": "integer",
+                    "title": "The hotBucketTimeRefreshInterval schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      10.0
+                    ]
+                  },
+                  "indexThreads": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/indexThreads",
+                    "type": "string",
+                    "title": "The indexThreads schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "auto"
+                    ]
+                  },
+                  "isInternal": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/isInternal",
+                    "type": "boolean",
+                    "title": "The isInternal schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "isReady": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/isReady",
+                    "type": "boolean",
+                    "title": "The isReady schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "isVirtual": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/isVirtual",
+                    "type": "boolean",
+                    "title": "The isVirtual schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "journalCompression": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/journalCompression",
+                    "type": "string",
+                    "title": "The journalCompression schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "gzip"
+                    ]
+                  },
+                  "lastInitSequenceNumber": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/lastInitSequenceNumber",
+                    "type": "integer",
+                    "title": "The lastInitSequenceNumber schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      7.0
+                    ]
+                  },
+                  "lastInitTime": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/lastInitTime",
+                    "type": "integer",
+                    "title": "The lastInitTime schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      1588849883.0
+                    ]
+                  },
+                  "maxBloomBackfillBucketAge": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxBloomBackfillBucketAge",
+                    "type": "string",
+                    "title": "The maxBloomBackfillBucketAge schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "30d"
+                    ]
+                  },
+                  "maxBucketSizeCacheEntries": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxBucketSizeCacheEntries",
+                    "type": "integer",
+                    "title": "The maxBucketSizeCacheEntries schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "maxConcurrentOptimizes": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxConcurrentOptimizes",
+                    "type": "integer",
+                    "title": "The maxConcurrentOptimizes schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      6.0
+                    ]
+                  },
+                  "maxDataSize": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxDataSize",
+                    "type": "string",
+                    "title": "The maxDataSize schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "auto"
+                    ]
+                  },
+                  "maxGlobalDataSizeMB": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxGlobalDataSizeMB",
+                    "type": "integer",
+                    "title": "The maxGlobalDataSizeMB schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "maxGlobalRawDataSizeMB": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxGlobalRawDataSizeMB",
+                    "type": "integer",
+                    "title": "The maxGlobalRawDataSizeMB schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "maxHotBuckets": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxHotBuckets",
+                    "type": "integer",
+                    "title": "The maxHotBuckets schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      3.0
+                    ]
+                  },
+                  "maxHotIdleSecs": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxHotIdleSecs",
+                    "type": "integer",
+                    "title": "The maxHotIdleSecs schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "maxHotSpanSecs": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxHotSpanSecs",
+                    "type": "integer",
+                    "title": "The maxHotSpanSecs schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      7776000.0
+                    ]
+                  },
+                  "maxMemMB": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxMemMB",
+                    "type": "integer",
+                    "title": "The maxMemMB schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      5.0
+                    ]
+                  },
+                  "maxMetaEntries": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxMetaEntries",
+                    "type": "integer",
+                    "title": "The maxMetaEntries schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      1000000.0
+                    ]
+                  },
+                  "maxRunningProcessGroups": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxRunningProcessGroups",
+                    "type": "integer",
+                    "title": "The maxRunningProcessGroups schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      8.0
+                    ]
+                  },
+                  "maxRunningProcessGroupsLowPriority": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxRunningProcessGroupsLowPriority",
+                    "type": "integer",
+                    "title": "The maxRunningProcessGroupsLowPriority schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      1.0
+                    ]
+                  },
+                  "maxTime": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxTime",
+                    "type": "string",
+                    "title": "The maxTime schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "2020-05-07T16:41:22+0530"
+                    ]
+                  },
+                  "maxTimeUnreplicatedNoAcks": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxTimeUnreplicatedNoAcks",
+                    "type": "integer",
+                    "title": "The maxTimeUnreplicatedNoAcks schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      300.0
+                    ]
+                  },
+                  "maxTimeUnreplicatedWithAcks": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxTimeUnreplicatedWithAcks",
+                    "type": "integer",
+                    "title": "The maxTimeUnreplicatedWithAcks schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      60.0
+                    ]
+                  },
+                  "maxTotalDataSizeMB": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxTotalDataSizeMB",
+                    "type": "integer",
+                    "title": "The maxTotalDataSizeMB schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      500000.0
+                    ]
+                  },
+                  "maxWarmDBCount": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/maxWarmDBCount",
+                    "type": "integer",
+                    "title": "The maxWarmDBCount schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      300.0
+                    ]
+                  },
+                  "memPoolMB": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/memPoolMB",
+                    "type": "string",
+                    "title": "The memPoolMB schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "auto"
+                    ]
+                  },
+                  "metric.compressionBlockSize": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/metric.compressionBlockSize",
+                    "type": "integer",
+                    "title": "The metric.compressionBlockSize schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      1024.0
+                    ]
+                  },
+                  "metric.enableFloatingPointCompression": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/metric.enableFloatingPointCompression",
+                    "type": "boolean",
+                    "title": "The metric.enableFloatingPointCompression schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "metric.tsidxTargetSizeMB": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/metric.tsidxTargetSizeMB",
+                    "type": "integer",
+                    "title": "The metric.tsidxTargetSizeMB schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      1500.0
+                    ]
+                  },
+                  "minHotIdleSecsBeforeForceRoll": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/minHotIdleSecsBeforeForceRoll",
+                    "type": "integer",
+                    "title": "The minHotIdleSecsBeforeForceRoll schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "minRawFileSyncSecs": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/minRawFileSyncSecs",
+                    "type": "string",
+                    "title": "The minRawFileSyncSecs schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "disable"
+                    ]
+                  },
+                  "minStreamGroupQueueSize": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/minStreamGroupQueueSize",
+                    "type": "integer",
+                    "title": "The minStreamGroupQueueSize schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      2000.0
+                    ]
+                  },
+                  "minTime": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/minTime",
+                    "type": "string",
+                    "title": "The minTime schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "2020-04-30T15:45:43+0530"
+                    ]
+                  },
+                  "partialServiceMetaPeriod": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/partialServiceMetaPeriod",
+                    "type": "integer",
+                    "title": "The partialServiceMetaPeriod schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "processTrackerServiceInterval": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/processTrackerServiceInterval",
+                    "type": "integer",
+                    "title": "The processTrackerServiceInterval schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      1.0
+                    ]
+                  },
+                  "quarantineFutureSecs": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/quarantineFutureSecs",
+                    "type": "integer",
+                    "title": "The quarantineFutureSecs schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      2592000.0
+                    ]
+                  },
+                  "quarantinePastSecs": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/quarantinePastSecs",
+                    "type": "integer",
+                    "title": "The quarantinePastSecs schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      77760000.0
+                    ]
+                  },
+                  "rawChunkSizeBytes": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/rawChunkSizeBytes",
+                    "type": "integer",
+                    "title": "The rawChunkSizeBytes schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      131072.0
+                    ]
+                  },
+                  "repFactor": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/repFactor",
+                    "type": "integer",
+                    "title": "The repFactor schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "rotatePeriodInSecs": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/rotatePeriodInSecs",
+                    "type": "integer",
+                    "title": "The rotatePeriodInSecs schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      60.0
+                    ]
+                  },
+                  "rtRouterQueueSize": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/rtRouterQueueSize",
+                    "type": "null",
+                    "title": "The rtRouterQueueSize schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "rtRouterThreads": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/rtRouterThreads",
+                    "type": "null",
+                    "title": "The rtRouterThreads schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "selfStorageThreads": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/selfStorageThreads",
+                    "type": "null",
+                    "title": "The selfStorageThreads schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "serviceInactiveIndexesPeriod": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/serviceInactiveIndexesPeriod",
+                    "type": "integer",
+                    "title": "The serviceInactiveIndexesPeriod schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      60.0
+                    ]
+                  },
+                  "serviceMetaPeriod": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/serviceMetaPeriod",
+                    "type": "integer",
+                    "title": "The serviceMetaPeriod schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      25.0
+                    ]
+                  },
+                  "serviceOnlyAsNeeded": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/serviceOnlyAsNeeded",
+                    "type": "boolean",
+                    "title": "The serviceOnlyAsNeeded schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "serviceSubtaskTimingPeriod": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/serviceSubtaskTimingPeriod",
+                    "type": "integer",
+                    "title": "The serviceSubtaskTimingPeriod schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      30.0
+                    ]
+                  },
+                  "splitByIndexKeys": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/splitByIndexKeys",
+                    "type": "string",
+                    "title": "The splitByIndexKeys schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ]
+                  },
+                  "streamingTargetTsidxSyncPeriodMsec": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/streamingTargetTsidxSyncPeriodMsec",
+                    "type": "integer",
+                    "title": "The streamingTargetTsidxSyncPeriodMsec schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      5000.0
+                    ]
+                  },
+                  "summaryHomePath_expanded": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/summaryHomePath_expanded",
+                    "type": "string",
+                    "title": "The summaryHomePath_expanded schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\summary"
+                    ]
+                  },
+                  "suppressBannerList": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/suppressBannerList",
+                    "type": "string",
+                    "title": "The suppressBannerList schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ]
+                  },
+                  "suspendHotRollByDeleteQuery": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/suspendHotRollByDeleteQuery",
+                    "type": "boolean",
+                    "title": "The suspendHotRollByDeleteQuery schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "sync": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/sync",
+                    "type": "integer",
+                    "title": "The sync schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      0.0
+                    ]
+                  },
+                  "syncMeta": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/syncMeta",
+                    "type": "boolean",
+                    "title": "The syncMeta schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "thawedPath": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/thawedPath",
+                    "type": "string",
+                    "title": "The thawedPath schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "$SPLUNK_DB\\audit\\thaweddb"
+                    ]
+                  },
+                  "thawedPath_expanded": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/thawedPath_expanded",
+                    "type": "string",
+                    "title": "The thawedPath_expanded schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\thaweddb"
+                    ]
+                  },
+                  "throttleCheckPeriod": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/throttleCheckPeriod",
+                    "type": "integer",
+                    "title": "The throttleCheckPeriod schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      15.0
+                    ]
+                  },
+                  "timePeriodInSecBeforeTsidxReduction": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/timePeriodInSecBeforeTsidxReduction",
+                    "type": "integer",
+                    "title": "The timePeriodInSecBeforeTsidxReduction schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      604800.0
+                    ]
+                  },
+                  "totalEventCount": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/totalEventCount",
+                    "type": "integer",
+                    "title": "The totalEventCount schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      13899.0
+                    ]
+                  },
+                  "tsidxReductionCheckPeriodInSec": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/tsidxReductionCheckPeriodInSec",
+                    "type": "integer",
+                    "title": "The tsidxReductionCheckPeriodInSec schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      600.0
+                    ]
+                  },
+                  "tsidxTargetSizeMB": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/tsidxTargetSizeMB",
+                    "type": "integer",
+                    "title": "The tsidxTargetSizeMB schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      1500.0
+                    ]
+                  },
+                  "tsidxWritingLevel": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/tsidxWritingLevel",
+                    "type": "null",
+                    "title": "The tsidxWritingLevel schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "tstatsHomePath": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/tstatsHomePath",
+                    "type": "string",
+                    "title": "The tstatsHomePath schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "volume:_splunk_summaries\\audit\\datamodel_summary"
+                    ]
+                  },
+                  "tstatsHomePath_expanded": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/tstatsHomePath_expanded",
+                    "type": "string",
+                    "title": "The tstatsHomePath_expanded schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "C:\\Program Files\\Splunk\\var\\lib\\splunk\\audit\\datamodel_summary"
+                    ]
+                  },
+                  "waitPeriodInSecsForManifestWrite": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/waitPeriodInSecsForManifestWrite",
+                    "type": "integer",
+                    "title": "The waitPeriodInSecsForManifestWrite schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      60.0
+                    ]
+                  },
+                  "warmToColdScript": {
+                    "$id": "#/properties/entry/items/anyOf/0/properties/content/properties/warmToColdScript",
+                    "type": "string",
+                    "title": "The warmToColdScript schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "paging": {
+      "$id": "#/properties/paging",
+      "type": "object",
+      "title": "The paging schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "offset": 0.0,
+          "total": 11.0,
+          "perPage": 30.0
+        }
+      ],
+      "required": [
+        "total",
+        "perPage",
+        "offset"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "total": {
+          "$id": "#/properties/paging/properties/total",
+          "type": "integer",
+          "title": "The total schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            11.0
+          ]
+        },
+        "perPage": {
+          "$id": "#/properties/paging/properties/perPage",
+          "type": "integer",
+          "title": "The perPage schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            30.0
+          ]
+        },
+        "offset": {
+          "$id": "#/properties/paging/properties/offset",
+          "type": "integer",
+          "title": "The offset schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            0.0
+          ]
+        }
+      }
+    },
+    "messages": {
+      "$id": "#/properties/messages",
+      "type": "array",
+      "title": "The messages schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/messages/items"
+      }
+    }
+  }
+}

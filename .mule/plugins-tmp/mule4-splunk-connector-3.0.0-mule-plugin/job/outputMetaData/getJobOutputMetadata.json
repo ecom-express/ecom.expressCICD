@@ -1,0 +1,889 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "links": {
+      "type": "object"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "updated": {
+      "type": "string"
+    },
+    "generator": {
+      "type": "object",
+      "properties": {
+        "build": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "build",
+        "version"
+      ]
+    },
+    "entry": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "search.log": {
+                  "type": "string"
+                },
+                "search_telemetry.json": {
+                  "type": "string"
+                },
+                "events": {
+                  "type": "string"
+                },
+                "results": {
+                  "type": "string"
+                },
+                "results_preview": {
+                  "type": "string"
+                },
+                "timeline": {
+                  "type": "string"
+                },
+                "summary": {
+                  "type": "string"
+                },
+                "control": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "search.log",
+                "search_telemetry.json",
+                "events",
+                "results",
+                "results_preview",
+                "timeline",
+                "summary",
+                "control"
+              ]
+            },
+            "published": {
+              "type": "string"
+            },
+            "author": {
+              "type": "string"
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "canSummarize": {
+                  "type": "boolean"
+                },
+                "cursorTime": {
+                  "type": "string"
+                },
+                "defaultSaveTTL": {
+                  "type": "string"
+                },
+                "defaultTTL": {
+                  "type": "string"
+                },
+                "delegate": {
+                  "type": "string"
+                },
+                "diskUsage": {
+                  "type": "integer"
+                },
+                "dispatchState": {
+                  "type": "string"
+                },
+                "doneProgress": {
+                  "type": "integer"
+                },
+                "dropCount": {
+                  "type": "integer"
+                },
+                "earliestTime": {
+                  "type": "string"
+                },
+                "eventAvailableCount": {
+                  "type": "integer"
+                },
+                "eventCount": {
+                  "type": "integer"
+                },
+                "eventFieldCount": {
+                  "type": "integer"
+                },
+                "eventIsStreaming": {
+                  "type": "boolean"
+                },
+                "eventIsTruncated": {
+                  "type": "boolean"
+                },
+                "eventSearch": {
+                  "type": "string"
+                },
+                "eventSorting": {
+                  "type": "string"
+                },
+                "isBatchModeSearch": {
+                  "type": "boolean"
+                },
+                "isDone": {
+                  "type": "boolean"
+                },
+                "isEventsPreviewEnabled": {
+                  "type": "boolean"
+                },
+                "isFailed": {
+                  "type": "boolean"
+                },
+                "isFinalized": {
+                  "type": "boolean"
+                },
+                "isPaused": {
+                  "type": "boolean"
+                },
+                "isPreviewEnabled": {
+                  "type": "boolean"
+                },
+                "isRealTimeSearch": {
+                  "type": "boolean"
+                },
+                "isRemoteTimeline": {
+                  "type": "boolean"
+                },
+                "isSaved": {
+                  "type": "boolean"
+                },
+                "isSavedSearch": {
+                  "type": "boolean"
+                },
+                "isTimeCursored": {
+                  "type": "boolean"
+                },
+                "isZombie": {
+                  "type": "boolean"
+                },
+                "keywords": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "latestTime": {
+                  "type": "string"
+                },
+                "normalizedSearch": {
+                  "type": "string"
+                },
+                "numPreviews": {
+                  "type": "integer"
+                },
+                "optimizedSearch": {
+                  "type": "string"
+                },
+                "phase0": {
+                  "type": "string"
+                },
+                "phase1": {
+                  "type": "string"
+                },
+                "pid": {
+                  "type": "string"
+                },
+                "priority": {
+                  "type": "integer"
+                },
+                "provenance": {
+                  "type": "string"
+                },
+                "remoteSearch": {
+                  "type": "string"
+                },
+                "reportSearch": {
+                  "type": "string"
+                },
+                "resultCount": {
+                  "type": "integer"
+                },
+                "resultIsStreaming": {
+                  "type": "boolean"
+                },
+                "resultPreviewCount": {
+                  "type": "integer"
+                },
+                "runDuration": {
+                  "type": "number"
+                },
+                "sampleRatio": {
+                  "type": "string"
+                },
+                "sampleSeed": {
+                  "type": "string"
+                },
+                "scanCount": {
+                  "type": "integer"
+                },
+                "search": {
+                  "type": "string"
+                },
+                "searchCanBeEventType": {
+                  "type": "boolean"
+                },
+                "searchEarliestTime": {
+                  "type": "integer"
+                },
+                "searchLatestTime": {
+                  "type": "integer"
+                },
+                "searchTotalBucketsCount": {
+                  "type": "integer"
+                },
+                "searchTotalEliminatedBucketsCount": {
+                  "type": "integer"
+                },
+                "sid": {
+                  "type": "string"
+                },
+                "statusBuckets": {
+                  "type": "integer"
+                },
+                "ttl": {
+                  "type": "integer"
+                },
+                "workload_pool": {
+                  "type": "string"
+                },
+                "performance": {
+                  "type": "object",
+                  "properties": {
+                    "command.fields": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        },
+                        "input_count": {
+                          "type": "integer"
+                        },
+                        "output_count": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations",
+                        "input_count",
+                        "output_count"
+                      ]
+                    },
+                    "command.search": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        },
+                        "input_count": {
+                          "type": "integer"
+                        },
+                        "output_count": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations",
+                        "input_count",
+                        "output_count"
+                      ]
+                    },
+                    "command.search.expand_search": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "command.search.expand_search.calcfield": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "command.search.expand_search.fieldaliaser": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "command.search.expand_search.kv": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "command.search.expand_search.lookup": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "command.search.expand_search.sourcetype": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "command.search.index": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "command.search.parse_directives": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "command.search.summary": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "command.search.track_sourcetypes": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "command.timeliner": {
+                      "type": "object",
+                      "properties": {
+                        "duration_secs": {
+                          "type": "number"
+                        },
+                        "invocations": {
+                          "type": "integer"
+                        },
+                        "input_count": {
+                          "type": "integer"
+                        },
+                        "output_count": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "duration_secs",
+                        "invocations",
+                        "input_count",
+                        "output_count"
+                      ]
+                    },
+                    "dispatch.createdSearchResultInfrastructure": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "dispatch.evaluate.search": {
+                      "type": "object",
+                      "properties": {
+                        "duration_secs": {
+                          "type": "number"
+                        },
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "duration_secs",
+                        "invocations"
+                      ]
+                    },
+                    "dispatch.fetch.rcp.phase_0": {
+                      "type": "object",
+                      "properties": {
+                        "duration_secs": {
+                          "type": "number"
+                        },
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "duration_secs",
+                        "invocations"
+                      ]
+                    },
+                    "dispatch.finalWriteToDisk": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "dispatch.localSearch": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "dispatch.readEventsInResults": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "dispatch.stream.local": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "dispatch.timeline": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "dispatch.writeStatus": {
+                      "type": "object",
+                      "properties": {
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "invocations"
+                      ]
+                    },
+                    "startup.configuration": {
+                      "type": "object",
+                      "properties": {
+                        "duration_secs": {
+                          "type": "number"
+                        },
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "duration_secs",
+                        "invocations"
+                      ]
+                    },
+                    "startup.handoff": {
+                      "type": "object",
+                      "properties": {
+                        "duration_secs": {
+                          "type": "number"
+                        },
+                        "invocations": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "duration_secs",
+                        "invocations"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "command.fields",
+                    "command.search",
+                    "command.search.expand_search",
+                    "command.search.expand_search.calcfield",
+                    "command.search.expand_search.fieldaliaser",
+                    "command.search.expand_search.kv",
+                    "command.search.expand_search.lookup",
+                    "command.search.expand_search.sourcetype",
+                    "command.search.index",
+                    "command.search.parse_directives",
+                    "command.search.summary",
+                    "command.search.track_sourcetypes",
+                    "command.timeliner",
+                    "dispatch.createdSearchResultInfrastructure",
+                    "dispatch.evaluate.search",
+                    "dispatch.fetch.rcp.phase_0",
+                    "dispatch.finalWriteToDisk",
+                    "dispatch.localSearch",
+                    "dispatch.readEventsInResults",
+                    "dispatch.stream.local",
+                    "dispatch.timeline",
+                    "dispatch.writeStatus",
+                    "startup.configuration",
+                    "startup.handoff"
+                  ]
+                },
+                "messages": {
+                  "type": "array",
+                  "items": {}
+                },
+                "request": {
+                  "type": "object",
+                  "properties": {
+                    "adhoc_search_level": {
+                      "type": "string"
+                    },
+                    "auto_cancel": {
+                      "type": "string"
+                    },
+                    "check_risky_command": {
+                      "type": "string"
+                    },
+                    "custom.search": {
+                      "type": "string"
+                    },
+                    "earliest_time": {
+                      "type": "string"
+                    },
+                    "indexedRealtime": {
+                      "type": "string"
+                    },
+                    "latest_time": {
+                      "type": "string"
+                    },
+                    "preview": {
+                      "type": "string"
+                    },
+                    "provenance": {
+                      "type": "string"
+                    },
+                    "rf": {
+                      "type": "string"
+                    },
+                    "sample_ratio": {
+                      "type": "string"
+                    },
+                    "search": {
+                      "type": "string"
+                    },
+                    "status_buckets": {
+                      "type": "string"
+                    },
+                    "ui_dispatch_app": {
+                      "type": "string"
+                    },
+                    "workload_pool": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "adhoc_search_level",
+                    "auto_cancel",
+                    "check_risky_command",
+                    "custom.search",
+                    "earliest_time",
+                    "indexedRealtime",
+                    "latest_time",
+                    "preview",
+                    "provenance",
+                    "rf",
+                    "sample_ratio",
+                    "search",
+                    "status_buckets",
+                    "ui_dispatch_app",
+                    "workload_pool"
+                  ]
+                },
+                "custom": {
+                  "type": "object",
+                  "properties": {
+                    "search": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "search"
+                  ]
+                },
+                "runtime": {
+                  "type": "object",
+                  "properties": {
+                    "auto_cancel": {
+                      "type": "string"
+                    },
+                    "auto_pause": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "auto_cancel",
+                    "auto_pause"
+                  ]
+                },
+                "searchProviders": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "canSummarize",
+                "cursorTime",
+                "defaultSaveTTL",
+                "defaultTTL",
+                "delegate",
+                "diskUsage",
+                "dispatchState",
+                "doneProgress",
+                "dropCount",
+                "earliestTime",
+                "eventAvailableCount",
+                "eventCount",
+                "eventFieldCount",
+                "eventIsStreaming",
+                "eventIsTruncated",
+                "eventSearch",
+                "eventSorting",
+                "isBatchModeSearch",
+                "isDone",
+                "isEventsPreviewEnabled",
+                "isFailed",
+                "isFinalized",
+                "isPaused",
+                "isPreviewEnabled",
+                "isRealTimeSearch",
+                "isRemoteTimeline",
+                "isSaved",
+                "isSavedSearch",
+                "isTimeCursored",
+                "isZombie",
+                "keywords",
+                "label",
+                "latestTime",
+                "normalizedSearch",
+                "numPreviews",
+                "optimizedSearch",
+                "phase0",
+                "phase1",
+                "pid",
+                "priority",
+                "provenance",
+                "remoteSearch",
+                "reportSearch",
+                "resultCount",
+                "resultIsStreaming",
+                "resultPreviewCount",
+                "runDuration",
+                "sampleRatio",
+                "sampleSeed",
+                "scanCount",
+                "search",
+                "searchCanBeEventType",
+                "searchEarliestTime",
+                "searchLatestTime",
+                "searchTotalBucketsCount",
+                "searchTotalEliminatedBucketsCount",
+                "sid",
+                "statusBuckets",
+                "ttl",
+                "workload_pool",
+                "performance",
+                "messages",
+                "request",
+                "custom",
+                "runtime",
+                "searchProviders"
+              ]
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                },
+                "app": {
+                  "type": "string"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "ttl": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "perms",
+                "owner",
+                "modifiable",
+                "sharing",
+                "app",
+                "can_write",
+                "ttl"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "published",
+            "author",
+            "content",
+            "acl"
+          ]
+        }
+      ]
+    },
+    "paging": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer"
+        },
+        "perPage": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "total",
+        "perPage",
+        "offset"
+      ]
+    }
+  },
+  "required": [
+    "links",
+    "origin",
+    "updated",
+    "generator",
+    "entry",
+    "paging"
+  ]
+}

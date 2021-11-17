@@ -1,0 +1,279 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "links": {
+      "type": "object"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "updated": {
+      "type": "string"
+    },
+    "generator": {
+      "type": "object",
+      "properties": {
+        "build": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "build",
+        "version"
+      ]
+    },
+    "entry": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "disable": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "disable"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_list",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "fields": {
+              "type": "object",
+              "properties": {
+                "required": {
+                  "type": "array",
+                  "items": {}
+                },
+                "optional": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "wildcard": {
+                  "type": "array",
+                  "items": {}
+                }
+              },
+              "required": [
+                "required",
+                "optional",
+                "wildcard"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "_rcvbuf": {
+                  "type": "integer"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "eai:location": {
+                  "type": "string"
+                },
+                "eai:type": {
+                  "type": "string"
+                },
+                "evt_dc_name": {
+                  "type": "null"
+                },
+                "evt_dns_name": {
+                  "type": "null"
+                },
+                "evt_resolve_ad_obj": {
+                  "type": "null"
+                },
+                "filecount": {
+                  "type": "integer"
+                },
+                "filestatecount": {
+                  "type": "integer"
+                },
+                "host": {
+                  "type": "string"
+                },
+                "host_resolved": {
+                  "type": "string"
+                },
+                "index": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "_rcvbuf",
+                "disabled",
+                "eai:acl",
+                "eai:location",
+                "eai:type",
+                "evt_dc_name",
+                "evt_dns_name",
+                "evt_resolve_ad_obj",
+                "filecount",
+                "filestatecount",
+                "host",
+                "host_resolved",
+                "index"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "fields",
+            "content"
+          ]
+        }
+      ]
+    },
+    "paging": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer"
+        },
+        "perPage": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "total",
+        "perPage",
+        "offset"
+      ]
+    },
+    "messages": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "links",
+    "origin",
+    "updated",
+    "generator",
+    "entry",
+    "paging",
+    "messages"
+  ]
+}

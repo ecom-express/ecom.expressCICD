@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "index": {
+      "type": "string"
+    },
+    "bytes": {
+      "type": "integer"
+    },
+    "host": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "sourcetype": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "index",
+    "bytes",
+    "host",
+    "source",
+    "sourcetype"
+  ]
+}

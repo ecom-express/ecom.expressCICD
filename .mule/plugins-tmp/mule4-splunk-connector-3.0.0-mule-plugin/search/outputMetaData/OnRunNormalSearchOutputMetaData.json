@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "init_offset": {
+      "type": "integer"
+    },
+    "messages": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "type"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "type"
+          ]
+        }
+      ]
+    },
+    "preview": {
+      "type": "boolean"
+    },
+    "results": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "sourcetype": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "index",
+            "source",
+            "sourcetype"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "sourcetype": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "index",
+            "source",
+            "sourcetype"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "sourcetype": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "index",
+            "source",
+            "sourcetype"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "init_offset",
+    "messages",
+    "preview",
+    "results"
+  ]
+}

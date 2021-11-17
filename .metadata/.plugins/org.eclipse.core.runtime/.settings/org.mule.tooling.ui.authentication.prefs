@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.mule.tooling.amc.apps={"userProjectMap"\:{"ecom_express"\:{"Ecom"\:"{\\"applicationName\\"\:\\"ecom\\",\\"muleRuntime\\"\:\\"4.4.0\\",\\"properties\\"\:{}}"}}}
+org.mule.tooling.ui.properties.enable.api.dependencies=true

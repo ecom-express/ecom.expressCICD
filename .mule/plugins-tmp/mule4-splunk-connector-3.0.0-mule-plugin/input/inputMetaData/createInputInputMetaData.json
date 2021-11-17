@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "dedicatedIoThreads": {
+      "type": "number"
+    },
+    "disabled": {
+      "type": "boolean"
+    },
+    "enableSSL": {
+      "type": "boolean"
+    },
+    "index": {
+      "type": "string"
+    },
+    "indexes": {
+      "type": "string"
+    },
+    "maxSockets": {
+      "type": "number"
+    },
+    "maxThreads": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "port": {
+      "type": "number"
+    },
+    "source": {
+      "type": "string"
+    },
+    "sourcetype": {
+      "type": "string"
+    },
+    "useDeploymentServer": {
+      "type": "boolean"
+    },
+    "blacklist": {
+      "type": "string"
+    },
+    "check-index": {
+      "type": "boolean"
+    },
+    "check-path": {
+      "type": "boolean"
+    },
+    "crc-salt": {
+      "type": "string"
+    },
+    "followTail": {
+      "type": "boolean"
+    },
+    "host": {
+      "type": "string"
+    },
+    "host_regex": {
+      "type": "string"
+    },
+    "host_segment": {
+      "type": "number"
+    },
+    "ignore-older-than": {
+      "type": "string"
+    },
+    "recursive": {
+      "type": "boolean"
+    },
+    "rename-source": {
+      "type": "string"
+    },
+    "time-before-close": {
+      "type": "number"
+    },
+    "whitelist": {
+      "type": "string"
+    },
+    "baseline": {
+      "type": "boolean"
+    },
+    "hive": {
+      "type": "string"
+    },
+    "proc": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "monitorSubnodes": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "dedicatedIoThreads",
+    "disabled",
+    "enableSSL",
+    "index",
+    "indexes",
+    "maxSockets",
+    "maxThreads",
+    "name",
+    "port",
+    "source",
+    "sourcetype",
+    "useDeploymentServer",
+    "blacklist",
+    "check-index",
+    "check-path",
+    "crc-salt",
+    "followTail",
+    "host",
+    "host_regex",
+    "host_segment",
+    "ignore-older-than",
+    "recursive",
+    "rename-source",
+    "time-before-close",
+    "whitelist",
+    "baseline",
+    "hive",
+    "proc",
+    "type",
+    "monitorSubnodes"
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "links": {
+      "type": "object",
+      "properties": {
+        "create": {
+          "type": "string"
+        },
+        "_reload": {
+          "type": "string"
+        },
+        "_acl": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "create",
+        "_reload",
+        "_acl"
+      ]
+    },
+    "origin": {
+      "type": "string"
+    },
+    "updated": {
+      "type": "string"
+    },
+    "generator": {
+      "type": "object",
+      "properties": {
+        "build": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "build",
+        "version"
+      ]
+    },
+    "entry": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "connections": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "connections"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_list",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "_rcvbuf": {
+                  "type": "integer"
+                },
+                "connection_host": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "evt_dc_name": {
+                  "type": "null"
+                },
+                "evt_dns_name": {
+                  "type": "null"
+                },
+                "evt_resolve_ad_obj": {
+                  "type": "null"
+                },
+                "group": {
+                  "type": "string"
+                },
+                "host": {
+                  "type": "string"
+                },
+                "host_resolved": {
+                  "type": "string"
+                },
+                "index": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "_rcvbuf",
+                "connection_host",
+                "disabled",
+                "eai:acl",
+                "evt_dc_name",
+                "evt_dns_name",
+                "evt_resolve_ad_obj",
+                "group",
+                "host",
+                "host_resolved",
+                "index"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        }
+      ]
+    },
+    "paging": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer"
+        },
+        "perPage": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "total",
+        "perPage",
+        "offset"
+      ]
+    },
+    "messages": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "links",
+    "origin",
+    "updated",
+    "generator",
+    "entry",
+    "paging",
+    "messages"
+  ]
+}

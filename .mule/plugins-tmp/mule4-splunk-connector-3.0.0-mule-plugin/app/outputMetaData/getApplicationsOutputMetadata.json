@@ -1,0 +1,3310 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "links": {
+      "type": "object",
+      "properties": {
+        "create": {
+          "type": "string"
+        },
+        "_reload": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "create",
+        "_reload"
+      ]
+    },
+    "origin": {
+      "type": "string"
+    },
+    "updated": {
+      "type": "string"
+    },
+    "generator": {
+      "type": "object",
+      "properties": {
+        "build": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "build",
+        "version"
+      ]
+    },
+    "entry": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "disable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "disable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "author": {
+                  "type": "string"
+                },
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "author",
+                "check_for_updates",
+                "configured",
+                "core",
+                "description",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "version",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "disable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "disable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "author": {
+                  "type": "string"
+                },
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "author",
+                "check_for_updates",
+                "configured",
+                "core",
+                "description",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "version",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "author": {
+                  "type": "string"
+                },
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "author",
+                "check_for_updates",
+                "configured",
+                "core",
+                "description",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "version",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "disable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "disable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "author": {
+                  "type": "string"
+                },
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "author",
+                "check_for_updates",
+                "configured",
+                "core",
+                "description",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "version",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "check_for_updates",
+                "configured",
+                "core",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "disable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "disable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "check_for_updates",
+                "configured",
+                "core",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "enable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "enable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "check_for_updates",
+                "configured",
+                "core",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "enable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "enable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "check_for_updates",
+                "configured",
+                "core",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "author": {
+                  "type": "string"
+                },
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "author",
+                "check_for_updates",
+                "configured",
+                "core",
+                "description",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "version",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "author": {
+                  "type": "string"
+                },
+                "build": {
+                  "type": "integer"
+                },
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "author",
+                "build",
+                "check_for_updates",
+                "configured",
+                "core",
+                "description",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "version",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "disable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "disable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "check_for_updates",
+                "configured",
+                "core",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "author": {
+                  "type": "string"
+                },
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "author",
+                "check_for_updates",
+                "configured",
+                "core",
+                "description",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "version",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "disable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "disable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "check_for_updates",
+                "configured",
+                "core",
+                "description",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "disable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "disable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "author": {
+                  "type": "string"
+                },
+                "build": {
+                  "type": "integer"
+                },
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "author",
+                "build",
+                "check_for_updates",
+                "configured",
+                "core",
+                "description",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "version",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "disable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "disable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "author": {
+                  "type": "string"
+                },
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "author",
+                "check_for_updates",
+                "configured",
+                "core",
+                "description",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "version",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "enable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "enable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "check_for_updates",
+                "configured",
+                "core",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "updated": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "alternate": {
+                  "type": "string"
+                },
+                "list": {
+                  "type": "string"
+                },
+                "_reload": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "remove": {
+                  "type": "string"
+                },
+                "enable": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "alternate",
+                "list",
+                "_reload",
+                "edit",
+                "remove",
+                "enable",
+                "package"
+              ]
+            },
+            "author": {
+              "type": "string"
+            },
+            "acl": {
+              "type": "object",
+              "properties": {
+                "app": {
+                  "type": "string"
+                },
+                "can_change_perms": {
+                  "type": "boolean"
+                },
+                "can_list": {
+                  "type": "boolean"
+                },
+                "can_share_app": {
+                  "type": "boolean"
+                },
+                "can_share_global": {
+                  "type": "boolean"
+                },
+                "can_share_user": {
+                  "type": "boolean"
+                },
+                "can_write": {
+                  "type": "boolean"
+                },
+                "modifiable": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "perms": {
+                  "type": "object",
+                  "properties": {
+                    "read": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "write": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "read",
+                    "write"
+                  ]
+                },
+                "removable": {
+                  "type": "boolean"
+                },
+                "sharing": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "app",
+                "can_change_perms",
+                "can_list",
+                "can_share_app",
+                "can_share_global",
+                "can_share_user",
+                "can_write",
+                "modifiable",
+                "owner",
+                "perms",
+                "removable",
+                "sharing"
+              ]
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "check_for_updates": {
+                  "type": "boolean"
+                },
+                "configured": {
+                  "type": "boolean"
+                },
+                "core": {
+                  "type": "boolean"
+                },
+                "disabled": {
+                  "type": "boolean"
+                },
+                "eai:acl": {
+                  "type": "null"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "managed_by_deployment_client": {
+                  "type": "boolean"
+                },
+                "show_in_nav": {
+                  "type": "boolean"
+                },
+                "state_change_requires_restart": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "check_for_updates",
+                "configured",
+                "core",
+                "disabled",
+                "eai:acl",
+                "label",
+                "managed_by_deployment_client",
+                "show_in_nav",
+                "state_change_requires_restart",
+                "visible"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "updated",
+            "links",
+            "author",
+            "acl",
+            "content"
+          ]
+        }
+      ]
+    },
+    "paging": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer"
+        },
+        "perPage": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "total",
+        "perPage",
+        "offset"
+      ]
+    },
+    "messages": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "links",
+    "origin",
+    "updated",
+    "generator",
+    "entry",
+    "paging",
+    "messages"
+  ]
+}

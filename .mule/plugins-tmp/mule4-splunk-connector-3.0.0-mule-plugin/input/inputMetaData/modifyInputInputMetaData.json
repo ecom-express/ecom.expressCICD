@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "disabled": {
+      "type": "boolean"
+    },
+    "host": {
+      "type": "string"
+    },
+    "index": {
+      "type": "string"
+    },
+    "indexes": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "sourcetype": {
+      "type": "string"
+    },
+    "useDeploymentServer": {
+      "type": "boolean"
+    },
+    "blacklist": {
+      "type": "string"
+    },
+    "check-index": {
+      "type": "boolean"
+    },
+    "check-path": {
+      "type": "boolean"
+    },
+    "crc-salt": {
+      "type": "string"
+    },
+    "followTail": {
+      "type": "boolean"
+    },
+    "host_regex": {
+      "type": "string"
+    },
+    "host_segment": {
+      "type": "number"
+    },
+    "ignore-older-than": {
+      "type": "string"
+    },
+    "recursive": {
+      "type": "boolean"
+    },
+    "rename-source": {
+      "type": "string"
+    },
+    "time-before-close": {
+      "type": "number"
+    },
+    "whitelist": {
+      "type": "string"
+    },
+    "baseline": {
+      "type": "number"
+    },
+    "hive": {
+      "type": "string"
+    },
+    "proc": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "monitorSubnodes": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "disabled",
+    "host",
+    "index",
+    "indexes",
+    "name",
+    "source",
+    "sourcetype",
+    "useDeploymentServer",
+    "blacklist",
+    "check-index",
+    "check-path",
+    "crc-salt",
+    "followTail",
+    "host_regex",
+    "host_segment",
+    "ignore-older-than",
+    "recursive",
+    "rename-source",
+    "time-before-close",
+    "whitelist",
+    "baseline",
+    "hive",
+    "proc",
+    "type",
+    "monitorSubnodes"
+  ]
+}

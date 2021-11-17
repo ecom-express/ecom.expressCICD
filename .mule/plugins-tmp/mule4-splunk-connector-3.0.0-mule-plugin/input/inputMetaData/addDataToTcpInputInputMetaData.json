@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "SSL": {
+      "type": "boolean"
+    },
+    "connection_host": {
+      "type": "string"
+    },
+    "disabled": {
+      "type": "boolean"
+    },
+    "host": {
+      "type": "string"
+    },
+    "restrictToHost": {
+      "type": "string"
+    },
+    "index": {
+      "type": "string"
+    },
+    "queue": {
+      "type": "string"
+    },
+    "rawTcpDoneTimeout": {
+      "type": "integer"
+    },
+    "source": {
+      "type": "string"
+    },
+    "sourcetype": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "requireClientCert": {
+      "type": "boolean"
+    },
+    "rootCA": {
+      "type": "string"
+    },
+    "serverCert": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "SSL",
+    "connection_host",
+    "disabled",
+    "host",
+    "restrictToHost",
+    "index",
+    "queue",
+    "rawTcpDoneTimeout",
+    "source",
+    "sourcetype",
+    "token",
+    "password",
+    "requireClientCert",
+    "rootCA",
+    "serverCert"
+  ]
+}

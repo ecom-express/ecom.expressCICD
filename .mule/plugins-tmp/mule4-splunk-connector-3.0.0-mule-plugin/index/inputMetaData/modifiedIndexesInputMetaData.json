@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "blockSignSize": {
+      "type": "number"
+    },
+    "bucketRebuildMemoryHint": {
+      "type": "string"
+    },
+    "coldToFrozenDir": {
+      "type": "string"
+    },
+    "coldToFrozenScript": {
+      "type": "string"
+    },
+    "compressRawdata": {
+      "type": "boolean"
+    },
+    "enableOnlineBucketRepair": {
+      "type": "boolean"
+    },
+    "frozenTimePeriodInSecs": {
+      "type": "number"
+    },
+    "maxBloomBackfillBucketAge": {
+      "type": "number"
+    },
+    "maxConcurrentOptimizes": {
+      "type": "number"
+    },
+    "maxDataSize": {
+      "type": "string"
+    },
+    "maxHotBuckets": {
+      "type": "number"
+    },
+    "maxHotIdleSecs": {
+      "type": "number"
+    },
+    "maxHotSpanSecs": {
+      "type": "number"
+    },
+    "maxMemMB": {
+      "type": "number"
+    },
+    "maxMetaEntries": {
+      "type": "number"
+    },
+    "maxTimeUnreplicatedNoAcks": {
+      "type": "number"
+    },
+    "maxTimeUnreplicatedWithAcks": {
+      "type": "number"
+    },
+    "maxTotalDataSizeMB": {
+      "type": "number"
+    },
+    "maxWarmDBCount": {
+      "type": "number"
+    },
+    "minRawFileSyncSecs": {
+      "type": "string"
+    },
+    "minStreamGroupQueueSize": {
+      "type": "number"
+    },
+    "partialServiceMetaPeriod": {
+      "type": "number"
+    },
+    "processTrackerServiceInterval": {
+      "type": "number"
+    },
+    "quarantineFutureSecs": {
+      "type": "number"
+    },
+    "quarantinePastSecs\t": {
+      "type": "number"
+    },
+    "rawChunkSizeBytes": {
+      "type": "number"
+    },
+    "repFactor": {
+      "type": "number"
+    },
+    "rotatePeriodInSecs": {
+      "type": "number"
+    },
+    "serviceMetaPeriod": {
+      "type": "number"
+    },
+    "syncMeta": {
+      "type": "boolean"
+    },
+    "throttleCheckPeriod": {
+      "type": "number"
+    },
+    "tstatsHomePath": {
+      "type": "string"
+    },
+    "warmToColdScript": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "blockSignSize",
+    "bucketRebuildMemoryHint",
+    "coldToFrozenDir",
+    "coldToFrozenScript",
+    "compressRawdata",
+    "enableOnlineBucketRepair",
+    "frozenTimePeriodInSecs",
+    "maxBloomBackfillBucketAge",
+    "maxConcurrentOptimizes",
+    "maxDataSize",
+    "maxHotBuckets",
+    "maxHotIdleSecs",
+    "maxHotSpanSecs",
+    "maxMemMB",
+    "maxMetaEntries",
+    "maxTimeUnreplicatedNoAcks",
+    "maxTimeUnreplicatedWithAcks",
+    "maxTotalDataSizeMB",
+    "maxWarmDBCount",
+    "minRawFileSyncSecs",
+    "minStreamGroupQueueSize",
+    "partialServiceMetaPeriod",
+    "processTrackerServiceInterval",
+    "quarantineFutureSecs",
+    "quarantinePastSecs\t",
+    "rawChunkSizeBytes",
+    "repFactor",
+    "rotatePeriodInSecs",
+    "serviceMetaPeriod",
+    "syncMeta",
+    "throttleCheckPeriod",
+    "tstatsHomePath",
+    "warmToColdScript"
+  ]
+}

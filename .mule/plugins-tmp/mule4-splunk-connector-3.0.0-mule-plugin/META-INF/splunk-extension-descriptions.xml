@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension-documentation>
+    <configs>
+        <config name="config">
+            <description><![CDATA[Default configuration]]></description>
+            <parameters>
+                <parameter name="readTimeout">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="expirationPolicy">
+                    <description><![CDATA[Configures the minimum amount of time that a dynamic configuration instance can remain idle before the runtime considers it eligible for expiration. This does not mean that the platform will expire the instance at the exact moment that it becomes eligible. The runtime will actually purge the instances when it sees it fit.]]></description>
+                </parameter>
+            </parameters>
+        </config>
+    </configs>
+    <connections>
+        <connection name="connection">
+            <description><![CDATA[]]></description>
+            <parameters>
+                <parameter name="protocol">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="tlsContext">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="baseUrl">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="username">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="password">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="proxyConfig">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="connectionTimeout">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="connectionTimeoutUnit">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="usePersistentConnections">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="maxConnections">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="connectionIdleTimeout">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="connectionIdleTimeoutUnit">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="streamResponse">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="responseBufferSize">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="cacheControl">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="reconnection">
+                    <description><![CDATA[When the application is deployed, a connectivity test is performed on all connectors. If set to true, deployment will fail if the test doesn't pass after exhausting the associated reconnection strategy]]></description>
+                </parameter>
+            </parameters>
+        </connection>
+    </connections>
+    <extension name="Splunk">
+        <description><![CDATA[This is the main class of an extension, is the entry point from which configurations, connection providers, operations and sources are going to be declared.]]></description>
+        <parameters/>
+    </extension>
+    <operations>
+        <operation name="addDataToIndex">
+            <description><![CDATA[Update the {name} index]]></description>
+            <parameters>
+                <parameter name="indexName">
+                    <description><![CDATA[Name of the index]]></description>
+                </parameter>
+                <parameter name="data">
+                    <description><![CDATA[data to be added to index]]></description>
+                </parameter>
+                <parameter name="indexParams">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="addDataToTcpInput">
+            <description><![CDATA[Update the container for managing data]]></description>
+            <parameters>
+                <parameter name="addTcpDataToInput">
+                    <description><![CDATA[name parameter is required.]]></description>
+                </parameter>
+                <parameter name="tcpInputType">
+                    <description><![CDATA[inputType]]></description>
+                </parameter>
+                <parameter name="name">
+                    <description><![CDATA[input name]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="addDataToUdpInput">
+            <description><![CDATA[Edit properties of the named UDP data input]]></description>
+            <parameters>
+                <parameter name="addUdpDataToInput">
+                    <description><![CDATA[name parameter is required.]]></description>
+                </parameter>
+                <parameter name="name">
+                    <description><![CDATA[input name]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="cleanIndex">
+            <description><![CDATA[clean index]]></description>
+            <parameters>
+                <parameter name="indexName">
+                    <description><![CDATA[the name of the index provided to be cleaned]]></description>
+                </parameter>
+                <parameter name="indexClean">
+                    <description><![CDATA[body]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="createIndex">
+            <description><![CDATA[Create a new index]]></description>
+            <parameters>
+                <parameter name="indexName">
+                    <description><![CDATA[name of the index provided]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="createInput">
+            <description><![CDATA[Modify global configuration. Add and modify tokens]]></description>
+            <parameters>
+                <parameter name="createTheInput">
+                    <description><![CDATA[name should be passed]]></description>
+                </parameter>
+                <parameter name="domain">
+                    <description><![CDATA[domain]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="createSavedSearch">
+            <description><![CDATA[Create a saved search]]></description>
+            <parameters>
+                <parameter name="savedSearch">
+                    <description><![CDATA[name and search parameters are required]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="deleteSavedSearch">
+            <description><![CDATA[Delete the named saved search]]></description>
+            <parameters>
+                <parameter name="uriName">
+                    <description><![CDATA[name of job to be deleted]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="getApplications">
+            <description><![CDATA[List installed apps and properties]]></description>
+            <parameters>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="getDataModel">
+            <description><![CDATA[Access a specific data model]]></description>
+            <parameters>
+                <parameter name="uriName">
+                    <description><![CDATA[data model name to be accessed]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="concise">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="getDataModels">
+            <description><![CDATA[List data models on the server]]></description>
+            <parameters>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="concise">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="getIndex">
+            <description><![CDATA[Access information about the {name} index]]></description>
+            <parameters>
+                <parameter name="uriName">
+                    <description><![CDATA[name should be passed here.]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="summarize">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="getIndexes">
+            <description><![CDATA[List the recognized indexes on the server]]></description>
+            <parameters>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="datatype">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="getInput">
+            <description><![CDATA[List details for the {name} input]]></description>
+            <parameters>
+                <parameter name="uriName">
+                    <description><![CDATA[name is passed here]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="common">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="getInputs">
+            <description><![CDATA[List all inputs, including modular inputs]]></description>
+            <parameters>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="common">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="getJob">
+            <description><![CDATA[Get details of all current searches]]></description>
+            <parameters>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="getSavedSearch">
+            <description><![CDATA[Access saved search configurations]]></description>
+            <parameters>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="earliestTime">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="latestTime">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="listDefaultActionArgs">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="addOrphanField">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="getSavedSearchHistory">
+            <description><![CDATA[List available search jobs created from the {name} saved search]]></description>
+            <parameters>
+                <parameter name="uriName">
+                    <description><![CDATA[name of job  to  get the history]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="modifyIndex">
+            <description><![CDATA[Updates the {name} index]]></description>
+            <parameters>
+                <parameter name="name">
+                    <description><![CDATA[index name will be provided to be modified]]></description>
+                </parameter>
+                <parameter name="modifiedIndex">
+                    <description><![CDATA[optional parameters]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="modifyInput">
+            <description><![CDATA[Update token configuration information]]></description>
+            <parameters>
+                <parameter name="inputModify">
+                    <description><![CDATA[checkPath parameter is required]]></description>
+                </parameter>
+                <parameter name="inputDomain">
+                    <description><![CDATA[inputDomain]]></description>
+                </parameter>
+                <parameter name="name">
+                    <description><![CDATA[inputName to be modified]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="modifySavedSearchProperties">
+            <description><![CDATA[Update the named saved search]]></description>
+            <parameters>
+                <parameter name="savedSearchProperties">
+                    <description><![CDATA[action.email,action.email.to  parameters are required]]></description>
+                </parameter>
+                <parameter name="name">
+                    <description><![CDATA[job name to be modified]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="removeIndex">
+            <description><![CDATA[Removes the {name} index and the data contained in it]]></description>
+            <parameters>
+                <parameter name="uriName">
+                    <description><![CDATA[name should be passed]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="removeInput">
+            <description><![CDATA[Delete a token]]></description>
+            <parameters>
+                <parameter name="uriName">
+                    <description><![CDATA[name is passed here]]></description>
+                </parameter>
+                <parameter name="inputDomain">
+                    <description><![CDATA[HTTP should be passed here]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="runBlockSearch">
+            <description><![CDATA[Get information about the {search_id} search job]]></description>
+            <parameters>
+                <parameter name="createJob">
+                    <description><![CDATA[name parameter is required]]></description>
+                </parameter>
+                <parameter name="execMode">
+                    <description><![CDATA[execution mode]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="runOneShotSearch">
+            <description><![CDATA[Start a new search and return the search ID (<sid>)]]></description>
+            <parameters>
+                <parameter name="oneShotSearch">
+                    <description><![CDATA[required parameters is optional(pass empty json in body)]]></description>
+                </parameter>
+                <parameter name="execMode">
+                    <description><![CDATA[execution mode]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="runSavedSearch">
+            <description><![CDATA[Dispatch the {name} saved search]]></description>
+            <parameters>
+                <parameter name="savedSearchRun">
+                    <description><![CDATA[parameters optional]]></description>
+                </parameter>
+                <parameter name="name">
+                    <description><![CDATA[job name]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="viewSavedSearch">
+            <description><![CDATA[Access the named saved search]]></description>
+            <parameters>
+                <parameter name="uriName">
+                    <description><![CDATA[job name to be viewed]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[output format]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="earliestTime">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="latestTime">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="listDefaultActionArgs">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="addOrphanField">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="readTimeout">
+                    <description><![CDATA[Specifies the amount of time, in milliseconds, that the consumer will wait for the response before it times out. Default value is 0, which means infinite. This attribute works in tandem with #readTimeoutUnit]]></description>
+                </parameter>
+                <parameter name="readTimeoutUnit">
+                    <description><![CDATA[A TimeUnit that qualifies the #readTimeout]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+    </operations>
+    <sources>
+        <source name="ExportSearchListener">
+            <description><![CDATA[]]></description>
+            <parameters>
+                <parameter name="earliestTime">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="latestTime">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="searchQuery">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="searchArgs">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="searchMode">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="primaryNodeOnly">
+                    <description><![CDATA[Whether this source should only be executed on the primary node when runnning in Cluster]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="redeliveryPolicy">
+                    <description><![CDATA[Defines a policy for processing the redelivery of the same message]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </source>
+        <source name="RealTimeSearchListener">
+            <description><![CDATA[]]></description>
+            <parameters>
+                <parameter name="searchQuery">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="searchArgs">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="primaryNodeOnly">
+                    <description><![CDATA[Whether this source should only be executed on the primary node when runnning in Cluster]]></description>
+                </parameter>
+                <parameter name="schedulingStrategy">
+                    <description><![CDATA[Configures the scheduler that triggers the polling]]></description>
+                </parameter>
+                <parameter name="redeliveryPolicy">
+                    <description><![CDATA[Defines a policy for processing the redelivery of the same message]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </source>
+        <source name="RunNormalSearchListener">
+            <description><![CDATA[]]></description>
+            <parameters>
+                <parameter name="searchQuery">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="searchArgs">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="outputMode">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="outputEncoding">
+                    <description><![CDATA[The encoding of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="primaryNodeOnly">
+                    <description><![CDATA[Whether this source should only be executed on the primary node when runnning in Cluster]]></description>
+                </parameter>
+                <parameter name="streamingStrategy">
+                    <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="redeliveryPolicy">
+                    <description><![CDATA[Defines a policy for processing the redelivery of the same message]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </source>
+    </sources>
+    <types>
+        <type name="com.mulesoft.connectors.splunk.api.HttpResponseAttributes">
+            <description><![CDATA[this class is used to represent  HttpResponseAttributes]]></description>
+            <parameters>
+                <parameter name="statusCode">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="reasonPhrase">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="headers">
+                    <description><![CDATA[]]></description>
+                </parameter>
+            </parameters>
+        </type>
+        <type name="com.mulesoft.connectors.splunk.api.proxy.HttpProxyConfig">
+            <description><![CDATA[Basic HTTP Proxy configuration based on host and port, and optionally a username and password for proxy authentication.
+
+ @since 1.0]]></description>
+            <parameters>
+                <parameter name="host">
+                    <description><![CDATA[Host where the proxy requests will be sent.]]></description>
+                </parameter>
+                <parameter name="port">
+                    <description><![CDATA[Port where the proxy requests will be sent.]]></description>
+                </parameter>
+                <parameter name="username">
+                    <description><![CDATA[The username to authenticate against the proxy.]]></description>
+                </parameter>
+                <parameter name="password">
+                    <description><![CDATA[The password to authenticate against the proxy.]]></description>
+                </parameter>
+                <parameter name="nonProxyHosts">
+                    <description><![CDATA[A list of comma separated hosts against which the proxy should not be used]]></description>
+                </parameter>
+            </parameters>
+        </type>
+    </types>
+</extension-documentation>
